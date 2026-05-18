@@ -1,7 +1,7 @@
-FROM postgres:12-alpine
+FROM postgres:18.4-alpine3.23
 
-ENV POSTGRES_USER=wongames
-ENV POSTGRES_PASSWORD=wongames123
-ENV POSTGRES_DB=wongames
+ENV POSTGRES_USER=strapi
+ENV POSTGRES_PASSWORD=strapi
+ENV POSTGRES_DB=strapi
 
 COPY ./dump.sql /docker-entrypoint-initdb.d/
